@@ -1,0 +1,8 @@
+Natural Language Processing is a branch of Artificial Intelligence that helps computers understand human language.
+Tokenization is the process of splitting text into smaller units called tokens.
+Stop words are common words such as is, the, and a that may not add much meaning.
+Flashcards help students revise important concepts quickly.
+Python is widely used in NLP because it has powerful libraries like NLTK and spaCy.
+
+
+
