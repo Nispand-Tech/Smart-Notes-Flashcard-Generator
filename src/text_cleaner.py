@@ -1,4 +1,4 @@
-from nltk.tokenize import sent_tokenize
+from nltk.tokenize import sent_tokenize,word_tokenize
 
 
 
@@ -20,3 +20,8 @@ def clean_sentences(sentences):
     return cleaned_sentences
 
 ## make notes at last of this project and learned technologies
+
+
+def tokenize_words(sentence):
+    words=word_tokenize(sentence)
+    return words
