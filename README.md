@@ -1,4 +1,10 @@
 (later on add screenshots if)
+
+## 🚀 Live Demo
+
+🔗 **Try the application here:**
+
+https://smart-notes-flashcard-generator.streamlit.app
 # 🗃️ Smart Notes Flashcard Generator
 
 > Generate intelligent flashcards automatically from study notes using **Natural Language Processing (NLP)**.
