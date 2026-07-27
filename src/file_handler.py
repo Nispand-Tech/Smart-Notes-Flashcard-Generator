@@ -7,3 +7,5 @@ def read_text_file(file_path):
 
 
 
+
+## Read the text file and returen its contents

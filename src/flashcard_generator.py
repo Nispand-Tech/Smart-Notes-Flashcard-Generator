@@ -13,10 +13,10 @@
 #     return flashcards
 
 
-def generate_flashcards(cleaned_sentences):
+def generate_flashcards(cleaned_sentences,keywords_list):
     flashcards=[]
 
-    for sentence in cleaned_sentences:
+    for sentence,keywords in zip(cleaned_sentences,keywords_list):
         #rule based NLP
         
         ## check if the sentence follows the pattern "X is Y"
@@ -26,18 +26,20 @@ def generate_flashcards(cleaned_sentences):
 
             flashcard={
                 "question": f"What is {subject}?",
-                "answer": definition.capitalize()
+                "answer": definition.capitalize(),
+                "keywords":keywords
             }
 
         
         ## check if the sentence follows the pattern "X are Y"
 
-        elif "are" in sentence:
-            subject,definition=sentence.split("are",1)
+        elif " are " in sentence:
+            subject,definition=sentence.split(" are ",1)
 
             flashcard={
-                "question":f" What are {subject}?",
-                "answer":definition.capitalize()
+                "question":f" What are {subject.strip()}?",
+                "answer":definition.capitalize(),
+                "keywords":keywords
             }
 
         
@@ -46,7 +48,8 @@ def generate_flashcards(cleaned_sentences):
         else:
             flashcard= {
                 "question":"Explain the following sentence:",
-                "answer":sentence
+                "answer":sentence,
+                "keywords":keywords
             }
 
 
